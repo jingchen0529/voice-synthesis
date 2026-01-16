@@ -1,0 +1,58 @@
+@import './base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  font-weight: normal;
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局网格背景 */
+#app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: -1;
+}
+
+/* Ant Design Steps 组件颜色覆盖 */
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.ant-steps .ant-steps-item-finish .ant-steps-item-icon .ant-steps-icon {
+  color: #fff;
+}
+
+.ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background-color: #10b981;
+}
+
+.ant-steps .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background-color: #e2e8f0;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon {
+  border-color: #e2e8f0;
+  background-color: #fff;
+}
+
+.ant-steps .ant-steps-item-wait .ant-steps-item-icon .ant-steps-icon {
+  color: #94a3b8;
+}
