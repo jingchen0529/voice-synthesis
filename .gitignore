@@ -22,6 +22,8 @@ yarn-error.log*
 
 # ==================== IDE ====================
 .idea/
+.kiro
+.shared
 .vscode/
 *.swp
 *.swo
@@ -58,6 +60,7 @@ logs/
 backend/test_output.wav
 backend/test_*.wav
 backend/test_*.mp3
+backend/test_*.py
 coverage/
 .coverage
 htmlcov/
